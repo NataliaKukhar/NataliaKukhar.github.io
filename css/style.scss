@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+$colorLine:#80ccff;
+$colorText: #737373;
+body{
+    color: $colorText;
+    font-family: 'Lato', sans-serif;
+    line-height: normal;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    &__img{
+        flex: 0 0 20%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    &__name{
+        font-weight: normal;
+    }
+    &__name, &__profession{
+        text-transform: uppercase ;
+    }
+    &__profession{
+        margin-bottom: 30px;
+    }
+    &__contact{
+        position: relative;
+    }
+    &__text{
+        text-align: center;
+        flex: 0 0 80%;
+    }
+}
+.fa{
+    color: $colorLine;
+    font-size: 35px;
+    margin-right: 10px;
+    &:hover{
+        color: grey;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+.row{
+    display: flex;
+    margin-top: 20px;
+}
+.column{
+    flex: 0 0 50%;
+    margin-right: 40px;
+    &__title{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        margin-bottom: 20px;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color:$colorLine;
+            position: absolute;
+            left: 0px;
+            bottom: -10px;
+            }
+    }
+    &__subtitle{
+        text-transform: uppercase;
+    }
+    &__text-education{
+        li{
+            list-style: none;
+        }
+    }
+
+}
